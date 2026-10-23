@@ -1,0 +1,128 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  padding: 56px 0 40px;
+  margin-bottom: 32px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hero .role {
+  font-size: 1.05rem;
+  opacity: .95;
+  margin-bottom: 20px;
+}
+.contacts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  font-size: .95rem;
+}
+.contacts a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,.5);
+}
+.contacts a:hover { border-bottom-style: solid; }
+
+/* Sections */
+main section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+h3 {
+  font-size: 1.05rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.period {
+  font-size: .9rem;
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+}
+.position {
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 8px;
+  font-size: .95rem;
+}
+
+.job { margin-bottom: 24px; }
+.job:last-child { margin-bottom: 0; }
+
+ul { padding-left: 22px; }
+li { margin-bottom: 5px; }
+
+.skills {
+  columns: 2;
+  column-gap: 32px;
+}
+.skills li { break-inside: avoid; }
+
+.education { list-style: none; padding-left: 0; }
+.education li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.education li:last-child { border-bottom: none; }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+  padding: 24px 0 40px;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 36px 0 28px; }
+  .hero h1 { font-size: 1.6rem; }
+  main section { padding: 18px 20px; }
+  .skills { columns: 1; }
+  h3 { flex-direction: column; gap: 2px; }
+}
